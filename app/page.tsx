@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HomePage() {
   return (
@@ -29,9 +30,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/40 to-black/50" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-6 py-32 pt-32">
           <div className="mb-8 animate-pulse">
-            <img
+            <Image
               src="/avni.jpg"
               alt="Avni Kanishk"
+              width={192}
+              height={192}
+              priority
               className="w-48 h-48 object-cover rounded-full shadow-2xl border-4 border-cyan-300/60 mx-auto ring-8 ring-cyan-300/20"
             />
           </div>
@@ -85,17 +89,17 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="project" className="w-full h-40 object-cover rounded-xl mb-4" />
+              <Image src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Product Dashboard" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
               <h3 className="font-bold text-xl mb-2 text-cyan-200">Product Dashboard</h3>
               <p className="text-white/70 text-sm leading-relaxed">Realtime analytics, intuitive UX and scalable APIs for enterprise users.</p>
             </div>
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=60" alt="project" className="w-full h-40 object-cover rounded-xl mb-4" />
+              <Image src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=60" alt="E-commerce Platform" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
               <h3 className="font-bold text-xl mb-2 text-cyan-200">E‑Commerce Platform</h3>
               <p className="text-white/70 text-sm leading-relaxed">Lightning-fast checkout, admin tools and seamless payment integration.</p>
             </div>
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2">
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="project" className="w-full h-40 object-cover rounded-xl mb-4" />
+              <Image src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Design System" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
               <h3 className="font-bold text-xl mb-2 text-cyan-200">Design System</h3>
               <p className="text-white/70 text-sm leading-relaxed">Modular components, design tokens and consistent developer experience.</p>
             </div>
