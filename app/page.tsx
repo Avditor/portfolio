@@ -44,9 +44,9 @@ export default function HomePage() {
   return (
     <div className="scroll-smooth text-white overflow-x-hidden">
       {/* Header */}
-      <header className="fixed w-full top-0 z-30 bg-linear-to-b from-black/40 to-black/0 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
-          <div className="text-2xl font-black tracking-tighter bg-linear-to-r from-blue-300 to-cyan-200 bg-clip-text text-transparent">AVNI</div>
+      <header className="fixed w-full top-0 z-30 bg-linear-to-b from-black/60 via-black/40 to-transparent backdrop-blur-sm border-b border-white/5">
+        <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+          <a href="#section1" className="text-xl font-bold tracking-tight text-white hover:text-cyan-300 transition-colors">AVNI</a>
           <nav>
             <ul className="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
               <li><a href="#section1" className="hover:text-cyan-300 transition-colors duration-300">Home</a></li>
@@ -99,18 +99,17 @@ export default function HomePage() {
               className="w-48 h-48 object-cover rounded-full shadow-2xl border-4 border-cyan-300/60 mx-auto ring-8 ring-cyan-300/20"
             />
           </div>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 drop-shadow-2xl leading-tight bg-linear-to-r from-cyan-200 via-blue-300 to-cyan-200 bg-clip-text text-transparent animate-fade-in section-content opacity-0 -translate-y-8">
+          <h1 className="text-5xl md:text-6xl font-black tracking-tight mb-4 drop-shadow-2xl leading-tight text-white animate-fade-in section-content opacity-0 -translate-y-8">
             AVNI KANISHK
           </h1>
-          <p className="text-lg md:text-2xl font-light text-white/85 mb-8 max-w-2xl mx-auto leading-relaxed section-content opacity-0 -translate-y-8">
-            Software Developer <span className="text-cyan-300">•</span> Full Stack Engineer <span className="text-cyan-300">•</span> Building impactful digital experiences
+          <p className="text-lg md:text-xl font-light text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed section-content opacity-0 -translate-y-8">
+            Full Stack Software Engineer crafting high-performance, user-centric digital solutions
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6 section-content opacity-0 -translate-y-8">
-            <a href="#section2" className="group relative px-8 py-4 bg-linear-to-r from-cyan-400 to-blue-500 text-black font-bold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <a href="#section2" className="btn btn-primary">
               See Projects
-              <span className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
-            <a href="#section3" className="group px-8 py-4 border-2 border-cyan-300/60 text-white font-semibold rounded-lg hover:bg-cyan-300/10 hover:border-cyan-300 transition-all duration-300 backdrop-blur-sm">
+            <a href="#section3" className="btn btn-secondary">
               Get in Touch
             </a>
           </div>
@@ -141,27 +140,27 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
         <div className="relative z-10 max-w-6xl mx-auto text-center px-6 py-32">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6 drop-shadow-2xl bg-linear-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent section-content opacity-0 -translate-y-8">
-            Featured Projects
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
+            Work & Projects
           </h2>
-          <p className="text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light section-content opacity-0 -translate-y-8">
-            A selection of recent work showcasing full-stack development, thoughtful design, and production-ready solutions.
+          <p className="text-lg text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed font-light section-content opacity-0 -translate-y-8">
+            Select projects demonstrating full-stack expertise, scalable architecture, and attention to detail.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
               <Image src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" alt="Product Dashboard" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-bold text-xl mb-2 text-cyan-200">Product Dashboard</h3>
-              <p className="text-white/70 text-sm leading-relaxed">Realtime analytics, intuitive UX and scalable APIs for enterprise users.</p>
+              <h3 className="font-semibold text-lg mb-2 text-white">Product Dashboard</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Realtime analytics platform with intuitive UI and production-grade APIs.</p>
             </div>
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
               <Image src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=60" alt="E-commerce Platform" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-bold text-xl mb-2 text-cyan-200">E‑Commerce Platform</h3>
-              <p className="text-white/70 text-sm leading-relaxed">Lightning-fast checkout, admin tools and seamless payment integration.</p>
+              <h3 className="font-semibold text-lg mb-2 text-white">E-Commerce Platform</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Fast, secure checkout flow with comprehensive inventory and order management.</p>
             </div>
             <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
               <Image src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Design System" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-bold text-xl mb-2 text-cyan-200">Design System</h3>
-              <p className="text-white/70 text-sm leading-relaxed">Modular components, design tokens and consistent developer experience.</p>
+              <h3 className="font-semibold text-lg mb-2 text-white">Design System</h3>
+              <p className="text-white/60 text-sm leading-relaxed">Reusable component library with design tokens for consistent, scalable UX.</p>
             </div>
           </div>
         </div>
@@ -190,22 +189,21 @@ export default function HomePage() {
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/45 to-black/60" />
         <div className="relative z-10 max-w-4xl mx-auto text-center px-6 py-32">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight mb-6 drop-shadow-2xl bg-linear-to-r from-cyan-200 to-blue-300 bg-clip-text text-transparent">
-            Let&apos;s Build Something Great
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
+            Connect
           </h2>
-          <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed max-w-2xl mx-auto font-light">
-            I&apos;m always excited to discuss innovative projects, collaborate with creative teams, and turn ideas into real impact. Reach out and let&apos;s talk.
+          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light section-content opacity-0 -translate-y-8">
+            Interested in collaboration or have a project in mind? Let&apos;s discuss how I can help.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a href="mailto:avni@example.com" className="group relative px-8 py-4 bg-linear-to-r from-cyan-400 to-blue-500 text-black font-bold rounded-lg shadow-lg hover:shadow-cyan-500/50 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+            <a href="mailto:avni@example.com" className="btn btn-primary" aria-label="Email Avni">
               Send Email
-              <span className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
-            <a href="#section1" className="group px-8 py-4 border-2 border-cyan-300/60 text-white font-semibold rounded-lg hover:bg-cyan-300/10 hover:border-cyan-300 transition-all duration-300 backdrop-blur-sm">
+            <a href="#section1" className="btn btn-secondary" aria-label="Back to top">
               Back to Top
             </a>
           </div>
-          <div className="flex justify-center gap-6 mt-12">
+          <div className="flex justify-center gap-6 mt-12 section-content opacity-0 -translate-y-8">
             <a href="https://github.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
               <i className="fab fa-github"></i>
             </a>

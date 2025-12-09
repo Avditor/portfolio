@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --background: #0b1220;
+  --foreground: #e6eef6;
+  --muted: #9aa8b2;
+  --card: rgba(255,255,255,0.04);
+  --accent: #06b6d4; /* cyan */
+  --accent-2: #3b82f6; /* blue */
 }
 
 @keyframes fade-in {
@@ -21,9 +25,11 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(59,130,246,0.04), transparent), var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
@@ -43,3 +49,86 @@ a[href*="#"] {
     animation: fade-in 1s ease-out forwards;
   }
 }
+
+/* Entrance animation utilities used by the page */
+@layer utilities {
+  .section-content {
+    transition: transform 700ms cubic-bezier(.2,.9,.2,1), opacity 700ms ease-out;
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  .section-content.in-view,
+  .section-content.in-view *,
+  .in-view {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+  }
+  .-translate-y-8 { transform: translateY(-2rem) }
+}
+
+/* Small accessibility focus state for menu */
+.focus-ring:focus { outline: 2px solid rgba(34,211,238,0.6); outline-offset: 2px }
+
+/* Professional button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  transition: all 200ms ease-out;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: -0.5px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  color: #06283d;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.15);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.15);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.btn-secondary:hover {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.1);
+}
+
+.btn-secondary:active {
+  background: rgba(6, 182, 212, 0.12);
+}
+
+/* Subtle card backdrop */
+.card-soft { 
+  background: var(--card); 
+  border-radius: 12px; 
+  padding: 1rem; 
+}
+
+/* Reduce overly playful animations */
+.animate-pulse { animation: none !important }
