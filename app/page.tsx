@@ -204,7 +204,7 @@ export default function HomePage() {
             </a>
           </div>
           <div className="flex justify-center gap-6 mt-12 section-content opacity-0 -translate-y-8">
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
+            <a href="https://github.com/Avditor" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
               <i className="fab fa-github"></i>
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
