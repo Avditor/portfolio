@@ -162,21 +162,7 @@ export default function HomePage() {
               <h3 className="font-semibold text-lg mb-2 text-white">Design System</h3>
               <p className="text-white/60 text-sm leading-relaxed">Reusable component library with design tokens for consistent, scalable UX.</p>
             </div>
-            <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
-              <Image src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=60" alt="Mobile App" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-semibold text-lg mb-2 text-white">Mobile App</h3>
-              <p className="text-white/60 text-sm leading-relaxed">Cross-platform mobile application with offline capabilities and seamless user experience.</p>
-            </div>
-            <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
-              <Image src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=60" alt="API Development" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-semibold text-lg mb-2 text-white">API Development</h3>
-              <p className="text-white/60 text-sm leading-relaxed">Robust RESTful APIs with authentication, rate limiting, and comprehensive documentation.</p>
-            </div>
-            <div className="group relative bg-white/5 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/10 transition-all duration-500 border border-cyan-300/20 hover:border-cyan-300/50 hover:shadow-2xl hover:shadow-cyan-500/20 transform hover:-translate-y-2 section-content opacity-0 -translate-y-8">
-              <Image src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=60" alt="Data Visualization" width={800} height={400} className="w-full h-40 object-cover rounded-xl mb-4" />
-              <h3 className="font-semibold text-lg mb-2 text-white">Data Visualization</h3>
-              <p className="text-white/60 text-sm leading-relaxed">Interactive dashboards and charts for real-time data insights and business intelligence.</p>
-            </div>
+
           </div>
         </div>
 
