@@ -179,6 +179,45 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Experience Section */}
+      <section
+        id="experience"
+        className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1800&q=80')",
+        }}
+      >
+        <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
+        <div className="relative z-10 max-w-4xl mx-auto px-6 py-32">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
+            Experience
+          </h2>
+          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed font-light section-content opacity-0 -translate-y-8">
+            Selected roles and internships.
+          </p>
+
+          <div className="space-y-6 section-content opacity-0 -translate-y-8">
+            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
+                  <p className="text-white/60 text-sm mb-2">May 2024 — Aug 2024 • Remote</p>
+                  <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
+                    <li>Implemented backend endpoints in Node.js + Express supporting user onboarding and analytics.</li>
+                    <li>Built React components for admin dashboard, improving task completion time by 20%.</li>
+                    <li>Wrote unit and integration tests and participated in code reviews and sprint planning.</li>
+                  </ul>
+                </div>
+                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center">
+                  <Image src="/oolka-logo.png" alt="Oolka logo" width={80} height={80} className="object-contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 3 */}
       <section
         id="section3"
