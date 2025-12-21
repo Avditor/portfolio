@@ -247,6 +247,12 @@ export default function HomePage() {
             <a href="https://github.com/Avditor" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
               <i className="fab fa-github"></i>
             </a>
+            <a href="https://leetcode.com" target="_blank" rel="noreferrer" aria-label="LeetCode" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#F89F1B" />
+                <path d="M8.2 12.2c0 .55.45 1 1 1h3.6l2.2-2.8-1-1.1-2.1 2.6H9.2c-.55 0-1 .45-1 1z" fill="#fff" />
+              </svg>
+            </a>
             <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
               <i className="fab fa-linkedin"></i>
             </a>
