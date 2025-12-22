@@ -46,7 +46,6 @@ export default function HomePage() {
       {/* Header */}
       <header className="fixed w-full top-0 z-30 bg-linear-to-b from-black/60 via-black/40 to-transparent backdrop-blur-sm border-b border-white/5">
         <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
-          <a href="#section1" className="text-xl font-bold tracking-tight text-white hover:text-cyan-300 transition-colors">AVNI</a>
           <nav>
             <ul className="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
               <li><a href="#section1" className="hover:text-cyan-300 transition-colors duration-300">Home</a></li>
