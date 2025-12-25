@@ -200,8 +200,8 @@ export default function HomePage() {
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
               <div className="flex items-start gap-4">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
-                  <p className="text-white/60 text-sm mb-2">May 2024 — Aug 2024 • Remote</p>
+                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka Waa</h3>
+                  <p className="text-white/60 text-sm mb-2">July 2024 — October 2024 • Remote</p>
                   <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
                     <li>Implemented backend endpoints in Node.js + Express supporting user onboarding and analytics.</li>
                     <li>Built React components for admin dashboard, improving task completion time by 20%.</li>
