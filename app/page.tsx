@@ -83,7 +83,7 @@ export default function HomePage() {
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://images.unsplash.com/photo-1639762681033-6461ffad8d80?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/40 to-black/50" />
@@ -134,7 +134,7 @@ export default function HomePage() {
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
@@ -184,7 +184,7 @@ export default function HomePage() {
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
@@ -200,7 +200,7 @@ export default function HomePage() {
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
               <div className="flex items-start gap-4">
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka Waa</h3>
+                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
                   <p className="text-white/60 text-sm mb-2">July 2024 — October 2024 • Remote</p>
                   <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
                     <li>Implemented backend endpoints in Node.js + Express supporting user onboarding and analytics.</li>
@@ -223,7 +223,7 @@ export default function HomePage() {
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80')",
+            "url('https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/45 to-black/60" />
