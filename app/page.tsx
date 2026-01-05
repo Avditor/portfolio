@@ -200,6 +200,22 @@ export default function HomePage() {
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
               <div className="flex items-start gap-4">
                 <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white">Full Stack Developer — OriginCore</h3>
+                  <p className="text-white/60 text-sm mb-2">January 2026 — Present • Remote</p>
+                  <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
+                    <li>Developing full-stack applications using modern technologies.</li>
+                    <li>Collaborating on scalable solutions and improving user experience.</li>
+                    <li>Participating in agile development processes and code reviews.</li>
+                  </ul>
+                </div>
+                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center">
+                  <Image src="/origincore-logo.png" alt="OriginCore logo" width={80} height={80} className="object-contain" />
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
                   <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
                   <p className="text-white/60 text-sm mb-2">July 2024 — October 2024 • Remote</p>
                   <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
