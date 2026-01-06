@@ -134,7 +134,7 @@ export default function HomePage() {
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1800&q=80')",
+            "url('/github.png')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
@@ -165,17 +165,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 opacity-90">
-          <svg className="relative block w-[calc(100%+1px)] h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" style={{stopColor: 'rgba(0,0,0,0.6)', stopOpacity: 1}} />
-                <stop offset="100%" style={{stopColor: 'rgba(6,182,212,0.1)', stopOpacity: 1}} />
-              </linearGradient>
-            </defs>
-            <path d="M0 0v46.29c47.24 22.65 103.63 35.94 161 39.14 59.57 3.33 118.94-3.71 176-17.7 68-16.62 130.8-45.67 198-59.74 106.76-23.67 203.84-4.93 305 22.1 61.23 16.06 122.49 31.29 185 28.1 54.3-2.78 105.74-18.51 157-34.41V0z" fill="url(#grad2)"></path>
-          </svg>
-        </div>
       </section>
 
       {/* Experience Section */}
