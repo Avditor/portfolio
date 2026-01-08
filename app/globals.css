@@ -132,3 +132,230 @@ a[href*="#"] {
 
 /* Reduce overly playful animations */
 .animate-pulse { animation: none !important }
+
+.tech-scene {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0a0a1f 0%,
+    #1a1a3e 50%,
+    #0f0f2a 100%
+  );
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(
+      rgba(147, 51, 234, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(147, 51, 234, 0.1) 1px,
+      transparent 1px
+    );
+  background-size: 80px 80px;
+  transform: perspective(1000px) rotateX(60deg);
+  transform-origin: center center;
+  opacity: 0.3;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(147, 51, 234, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(147, 51, 234, 0.3) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(147, 51, 234, 0.2) 0%,
+      transparent 70%
+    );
+  animation: particles-drift 20s ease-in-out infinite;
+}
+
+@keyframes particles-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(50px, -30px) scale(1.1);
+  }
+}
+
+.cubes-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 2000px;
+}
+
+.glass-cube {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.cube-1 {
+  top: 15%;
+  left: 10%;
+  animation: float-1 6s ease-in-out infinite;
+}
+
+.cube-2 {
+  top: 12%;
+  right: 8%;
+  animation: float-2 5s ease-in-out infinite;
+}
+
+.cube-3 {
+  bottom: 15%;
+  left: 12%;
+  animation: float-3 7s ease-in-out infinite;
+}
+
+.cube-4 {
+  bottom: 18%;
+  right: 10%;
+  animation: float-4 6.5s ease-in-out infinite;
+}
+
+@keyframes float-1 {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotateY(180deg) rotateX(10deg);
+  }
+}
+
+@keyframes float-2 {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg) rotateX(5deg);
+  }
+  50% {
+    transform: translateY(-50px) rotateY(-180deg) rotateX(-5deg);
+  }
+}
+
+@keyframes float-3 {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg) rotateX(-5deg);
+  }
+  50% {
+    transform: translateY(-35px) rotateY(180deg) rotateX(15deg);
+  }
+}
+
+@keyframes float-4 {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg) rotateX(10deg);
+  }
+  50% {
+    transform: translateY(-45px) rotateY(-180deg)
+      rotateX(-10deg);
+  }
+}
+
+.cube-face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(147, 51, 234, 0.1);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(196, 181, 253, 0.9);
+  box-shadow:
+    inset 0 0 40px rgba(147, 51, 234, 0.1),
+    0 0 40px rgba(147, 51, 234, 0.2);
+}
+
+.front {
+  transform: translateZ(100px);
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+  background: rgba(147, 51, 234, 0.05);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  background: rgba(147, 51, 234, 0.05);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+  background: rgba(147, 51, 234, 0.08);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background: rgba(147, 51, 234, 0.08);
+}
+
+/* Glow effects */
+.glass-cube::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(147, 51, 234, 0.3) 0%,
+    transparent 70%
+  );
+  animation: glow-pulse 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Hover effect */
+.glass-cube:hover {
+  transform: scale(1.2) rotateY(45deg) rotateX(15deg);
+}

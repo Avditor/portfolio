@@ -219,23 +219,56 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+      {/* Smooth Transition Divider */}
+      <div className="w-full flex justify-center items-center py-8 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent">
+        <div className="h-2 w-32 rounded-full bg-gradient-to-r from-cyan-400/40 via-blue-400/40 to-cyan-400/40 blur-sm opacity-70" />
+      </div>
       </section>
 
       {/* Section 3 */}
-      <section
-        id="section3"
-        className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=1800&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/45 to-black/60" />
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-6 py-32">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
+      <section id="section3" className="tech-scene">
+        <div className="background-grid"></div>
+        <div className="particles"></div>
+        <div className="cubes-container">
+          <div className="glass-cube cube-1">
+            <div className="cube-face front"></div>
+            <div className="cube-face back"></div>
+            <div className="cube-face left"></div>
+            <div className="cube-face right"></div>
+            <div className="cube-face top"></div>
+            <div className="cube-face bottom"></div>
+          </div>
+          <div className="glass-cube cube-2">
+            <div className="cube-face front"></div>
+            <div className="cube-face back"></div>
+            <div className="cube-face left"></div>
+            <div className="cube-face right"></div>
+            <div className="cube-face top"></div>
+            <div className="cube-face bottom"></div>
+          </div>
+          <div className="glass-cube cube-3">
+            <div className="cube-face front"></div>
+            <div className="cube-face back"></div>
+            <div className="cube-face left"></div>
+            <div className="cube-face right"></div>
+            <div className="cube-face top"></div>
+            <div className="cube-face bottom"></div>
+          </div>
+          <div className="glass-cube cube-4">
+            <div className="cube-face front"></div>
+            <div className="cube-face back"></div>
+            <div className="cube-face left"></div>
+            <div className="cube-face right"></div>
+            <div className="cube-face top"></div>
+            <div className="cube-face bottom"></div>
+          </div>
+        </div>
+        <div className="relative z-20 max-w-4xl mx-auto text-center px-6 py-32 bg-black/60 backdrop-blur-md rounded-xl border border-white/10">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content">
             Connect
           </h2>
-          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light section-content opacity-0 -translate-y-8">
+          <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light section-content">
             Interested in collaboration or have a project in mind? Let&apos;s discuss how I can help.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
@@ -244,23 +277,6 @@ export default function HomePage() {
             </a>
             <a href="#section1" className="btn btn-secondary" aria-label="Back to top">
               Back to Top
-            </a>
-          </div>
-          <div className="flex justify-center gap-6 mt-12 section-content opacity-0 -translate-y-8">
-            <a href="https://github.com/Avditor" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="https://leetcode.com" target="_blank" rel="noreferrer" aria-label="LeetCode" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-6 h-6" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" fill="#F89F1B" />
-                <path d="M8.2 12.2c0 .55.45 1 1 1h3.6l2.2-2.8-1-1.1-2.1 2.6H9.2c-.55 0-1 .45-1 1z" fill="#fff" />
-              </svg>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="https://x.com" target="_blank" rel="noreferrer" className="text-cyan-300 hover:text-cyan-100 transition-colors duration-300 text-2xl">
-              <i className="fab fa-twitter"></i>
             </a>
           </div>
         </div>
