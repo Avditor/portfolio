@@ -359,3 +359,4 @@ a[href*="#"] {
 .glass-cube:hover {
   transform: scale(1.2) rotateY(45deg) rotateX(15deg);
 
+}
