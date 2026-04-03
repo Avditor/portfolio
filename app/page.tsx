@@ -232,7 +232,9 @@ export default function HomePage() {
         <div className="particles"></div>
         <div className="cubes-container">
           <div className="glass-cube cube-1">
-            <div className="cube-face front"></div>
+            <div className="cube-face front flex items-center justify-center">
+              <Image src="/github.png" alt="GitHub Logo" width={64} height={64} />
+            </div>
             <div className="cube-face back"></div>
             <div className="cube-face left"></div>
             <div className="cube-face right"></div>
@@ -240,7 +242,9 @@ export default function HomePage() {
             <div className="cube-face bottom"></div>
           </div>
           <div className="glass-cube cube-2">
-            <div className="cube-face front"></div>
+            <div className="cube-face front flex items-center justify-center">
+              <Image src="/logos/linkedin.svg" alt="LinkedIn Logo" width={64} height={64} />
+            </div>
             <div className="cube-face back"></div>
             <div className="cube-face left"></div>
             <div className="cube-face right"></div>
@@ -248,7 +252,9 @@ export default function HomePage() {
             <div className="cube-face bottom"></div>
           </div>
           <div className="glass-cube cube-3">
-            <div className="cube-face front"></div>
+            <div className="cube-face front flex items-center justify-center">
+              <Image src="/logos/leetcode.svg" alt="LeetCode Logo" width={64} height={64} />
+            </div>
             <div className="cube-face back"></div>
             <div className="cube-face left"></div>
             <div className="cube-face right"></div>
@@ -256,7 +262,9 @@ export default function HomePage() {
             <div className="cube-face bottom"></div>
           </div>
           <div className="glass-cube cube-4">
-            <div className="cube-face front"></div>
+            <div className="cube-face front flex items-center justify-center">
+              <Image src="/logos/twitter.svg" alt="Twitter Logo" width={64} height={64} />
+            </div>
             <div className="cube-face back"></div>
             <div className="cube-face left"></div>
             <div className="cube-face right"></div>
