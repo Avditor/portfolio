@@ -169,14 +169,14 @@ export default function HomePage() {
       {/* Experience Section */}
       <section
         id="experience"
-        className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
+        className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
-        <div className="relative z-10 max-w-4xl mx-auto px-6 py-32">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
             Experience
           </h2>
@@ -184,7 +184,7 @@ export default function HomePage() {
             Selected roles and internships.
           </p>
 
-          <div className="space-y-6 section-content opacity-0 -translate-y-8">
+          <div className="space-y-6 section-content opacity-0 -translate-y-8 flex flex-col items-center">
             <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
               <div className="flex items-start gap-4">
                 <div className="flex-1">
