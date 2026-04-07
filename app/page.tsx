@@ -167,6 +167,7 @@ export default function HomePage() {
       </section>
 
       {/* Experience Section */}
+
       <section
         id="experience"
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center justify-center overflow-hidden"
@@ -175,48 +176,68 @@ export default function HomePage() {
             "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-linear-to-b from-black/25 via-black/40 to-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white section-content opacity-0 -translate-y-8">
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white animate-fadein-up">
             Experience
           </h2>
-          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed font-light section-content opacity-0 -translate-y-8">
+          <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed font-light animate-fadein-up delay-100">
             Selected roles and internships.
           </p>
 
-          <div className="space-y-6 section-content opacity-0 -translate-y-8 flex flex-col items-center">
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
-              <div className="flex items-start gap-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Full Stack Developer — OriginCore</h3>
+          <div className="space-y-8 w-full flex flex-col items-center">
+            {/* Experience Card 1 */}
+            <div className="group bg-white/10 backdrop-blur-2xl rounded-2xl p-7 border border-cyan-300/20 shadow-xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl animate-fadein-up delay-200 w-full max-w-2xl relative">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
+                  <a href="https://origincore.com" target="_blank" rel="noopener noreferrer" title="OriginCore Website">
+                    <Image src="/origincore-logo.png" alt="OriginCore logo" width={80} height={80} className="object-contain" />
+                  </a>
+                </div>
+                <div className="flex-1 text-left">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-xl font-semibold text-white">Full Stack Developer — OriginCore</h3>
+                    <a href="https://origincore.com" target="_blank" rel="noopener noreferrer" className="ml-1 inline-block align-middle" title="Visit OriginCore">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-cyan-300 group-hover:text-cyan-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14m-7 7h7a2 2 0 002-2v-7" /></svg>
+                    </a>
+                  </div>
                   <p className="text-white/60 text-sm mb-2">January 2026 — Present • Remote</p>
-                  <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
+                  <ul className="list-disc list-inside text-white/80 text-sm space-y-1">
                     <li>Developing full-stack applications using modern technologies.</li>
                     <li>Collaborating on scalable solutions and improving user experience.</li>
                     <li>Participating in agile development processes and code reviews.</li>
                   </ul>
                 </div>
-                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center">
-                  <Image src="/origincore-logo.png" alt="OriginCore logo" width={80} height={80} className="object-contain" />
-                </div>
               </div>
             </div>
-            <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-cyan-300/20">
-              <div className="flex items-start gap-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
+
+            {/* Experience Card 2 */}
+            <div className="group bg-white/10 backdrop-blur-2xl rounded-2xl p-7 border border-cyan-300/20 shadow-xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl animate-fadein-up delay-300 w-full max-w-2xl relative">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
+                  <a href="https://oolka.com" target="_blank" rel="noopener noreferrer" title="Oolka Website">
+                    <Image src="/oolka-logo.png" alt="Oolka logo" width={80} height={80} className="object-contain" />
+                  </a>
+                </div>
+                <div className="flex-1 text-left">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-xl font-semibold text-white">Software Developer Intern — Oolka</h3>
+                    <a href="https://oolka.com" target="_blank" rel="noopener noreferrer" className="ml-1 inline-block align-middle" title="Visit Oolka">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-cyan-300 group-hover:text-cyan-400 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 3h7m0 0v7m0-7L10 14m-7 7h7a2 2 0 002-2v-7" /></svg>
+                    </a>
+                  </div>
                   <p className="text-white/60 text-sm mb-2">July 2024 — October 2024 • Remote</p>
-                  <ul className="list-disc list-inside text-white/70 text-sm space-y-1">
+                  <ul className="list-disc list-inside text-white/80 text-sm space-y-1">
                     <li>Implemented backend endpoints in Node.js + Express supporting user onboarding and analytics.</li>
                     <li>Built React components for admin dashboard, improving task completion time by 20%.</li>
                     <li>Wrote unit and integration tests and participated in code reviews and sprint planning.</li>
                   </ul>
                 </div>
-                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/5 flex items-center justify-center">
-                  <Image src="/oolka-logo.png" alt="Oolka logo" width={80} height={80} className="object-contain" />
-                </div>
               </div>
             </div>
+
+            {/* Vertical Timeline Connector (optional, for visual flow) */}
+            <div className="hidden sm:block absolute left-1/2 top-32 bottom-32 w-1 bg-gradient-to-b from-cyan-400/30 via-cyan-300/10 to-transparent rounded-full -z-10" style={{transform: 'translateX(-50%)'}} />
           </div>
         </div>
 
