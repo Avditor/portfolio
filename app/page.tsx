@@ -78,6 +78,12 @@ export default function HomePage() {
       </header>
 
       {/* Section 1 */}
+
+      {/* Fun Fact Card (for commit) */}
+      <div className="card" style={{ background: '#fffbe7', color: '#b26a00', margin: '2rem auto', maxWidth: 480 }}>
+        <h3 style={{ fontWeight: 700, fontSize: '1.4rem', marginBottom: 8 }}>Fun Fact</h3>
+        <p style={{ fontSize: '1.1rem', margin: 0 }}>I can add new sections to my portfolio instantly!</p>
+      </div>
       <section
         id="section1"
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
