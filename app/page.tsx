@@ -79,6 +79,14 @@ export default function HomePage() {
 
       {/* Section 1 */}
 
+      {/* Motivational Quote (for commit) */}
+      <div className="card" style={{ background: '#e0f2fe', color: '#0369a1', margin: '2rem auto', maxWidth: 480, textAlign: 'center' }}>
+        <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Motivational Quote</h3>
+        <p style={{ fontSize: '1.05rem', margin: 0, fontStyle: 'italic' }}>
+          "Success is the sum of small efforts, repeated day in and day out."
+        </p>
+      </div>
+
       <section
         id="section1"
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
