@@ -87,6 +87,17 @@ export default function HomePage() {
         </p>
       </div>
 
+      {/* Tech Stack Card (for commit) */}
+      <div className="card" style={{ background: '#f1f5f9', color: '#0f172a', margin: '2rem auto', maxWidth: 480 }}>
+        <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Tech Stack</h3>
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexWrap: 'wrap', gap: '0.7rem', justifyContent: 'center' }}>
+          <li style={{ background: '#bae6fd', color: '#0369a1', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>React</li>
+          <li style={{ background: '#c7d2fe', color: '#3730a3', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>Next.js</li>
+          <li style={{ background: '#bbf7d0', color: '#166534', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>TypeScript</li>
+          <li style={{ background: '#fee2e2', color: '#b91c1c', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>Tailwind CSS</li>
+        </ul>
+      </div>
+
       <section
         id="section1"
         className="min-h-screen bg-fixed bg-center bg-cover relative flex items-center overflow-hidden"
