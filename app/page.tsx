@@ -4,6 +4,13 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function HomePage() {
+        {/* Quick Tip Card (for commit) */}
+        <div className="card" style={{ background: '#fef9c3', color: '#92400e', margin: '2rem auto', maxWidth: 480 }}>
+          <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Quick Tip</h3>
+          <p style={{ fontSize: '1.05rem', margin: 0 }}>
+            Use <span style={{ fontWeight: 600 }}>Ctrl + Shift + P</span> in VS Code to access all commands instantly!
+          </p>
+        </div>
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
