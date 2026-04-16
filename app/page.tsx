@@ -3,14 +3,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+
 export default function HomePage() {
-        {/* Quick Tip Card (for commit) */}
-        <div className="card" style={{ background: '#fef9c3', color: '#92400e', margin: '2rem auto', maxWidth: 480 }}>
-          <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Quick Tip</h3>
-          <p style={{ fontSize: '1.05rem', margin: 0 }}>
-            Use <span style={{ fontWeight: 600 }}>Ctrl + Shift + P</span> in VS Code to access all commands instantly!
-          </p>
-        </div>
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -48,6 +42,7 @@ export default function HomePage() {
     };
   }, []);
 
+
   return (
     <div className="scroll-smooth text-white overflow-x-hidden">
       {/* Header */}
@@ -59,7 +54,6 @@ export default function HomePage() {
               <li><a href="#section2" className="hover:text-cyan-300 transition-colors duration-300">Projects</a></li>
               <li><a href="#section3" className="hover:text-cyan-300 transition-colors duration-300">Contact</a></li>
             </ul>
-
             <button
               aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={menuOpen}
@@ -74,7 +68,6 @@ export default function HomePage() {
                 )}
               </svg>
             </button>
-
             <div className={`absolute right-4 top-16 w-48 bg-black/70 backdrop-blur-lg rounded-lg py-2 shadow-lg transition-all ${menuOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'} md:hidden`}>
               <a href="#section1" className="block px-4 py-2 hover:bg-white/5" onClick={() => setMenuOpen(false)}>Home</a>
               <a href="#section2" className="block px-4 py-2 hover:bg-white/5" onClick={() => setMenuOpen(false)}>Projects</a>
@@ -84,25 +77,32 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Section 1 */}
-
-      {/* Motivational Quote (for commit) */}
-      <div className="card" style={{ background: '#e0f2fe', color: '#0369a1', margin: '2rem auto', maxWidth: 480, textAlign: 'center' }}>
-        <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Motivational Quote</h3>
-        <p style={{ fontSize: '1.05rem', margin: 0, fontStyle: 'italic' }}>
-          "Success is the sum of small efforts, repeated day in and day out."
-        </p>
-      </div>
-
-      {/* Tech Stack Card (for commit) */}
-      <div className="card" style={{ background: '#f1f5f9', color: '#0f172a', margin: '2rem auto', maxWidth: 480 }}>
-        <h3 style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: 8 }}>Tech Stack</h3>
-        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexWrap: 'wrap', gap: '0.7rem', justifyContent: 'center' }}>
-          <li style={{ background: '#bae6fd', color: '#0369a1', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>React</li>
-          <li style={{ background: '#c7d2fe', color: '#3730a3', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>Next.js</li>
-          <li style={{ background: '#bbf7d0', color: '#166534', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>TypeScript</li>
-          <li style={{ background: '#fee2e2', color: '#b91c1c', borderRadius: 8, padding: '0.3rem 0.8rem', fontWeight: 500 }}>Tailwind CSS</li>
-        </ul>
+      {/* Cards Section - improved placement and spacing */}
+      <div className="flex flex-col items-center gap-6 mt-28 mb-10 px-4">
+        {/* Quick Tip Card */}
+        <div className="card w-full max-w-md bg-yellow-100 text-yellow-800 rounded-xl shadow-lg p-6 text-center">
+          <h3 className="font-bold text-lg mb-2">Quick Tip</h3>
+          <p className="text-base m-0">
+            Use <span className="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
+          </p>
+        </div>
+        {/* Motivational Quote Card */}
+        <div className="card w-full max-w-md bg-sky-100 text-sky-700 rounded-xl shadow-lg p-6 text-center">
+          <h3 className="font-bold text-lg mb-2">Motivational Quote</h3>
+          <p className="text-base italic m-0">
+            "Success is the sum of small efforts, repeated day in and day out."
+          </p>
+        </div>
+        {/* Tech Stack Card */}
+        <div className="card w-full max-w-md bg-slate-100 text-slate-900 rounded-xl shadow-lg p-6 text-center">
+          <h3 className="font-bold text-lg mb-2">Tech Stack</h3>
+          <ul className="flex flex-wrap gap-3 justify-center p-0 m-0 list-none">
+            <li className="bg-sky-200 text-sky-700 rounded-lg px-3 py-1 font-medium">React</li>
+            <li className="bg-indigo-200 text-indigo-800 rounded-lg px-3 py-1 font-medium">Next.js</li>
+            <li className="bg-green-200 text-green-800 rounded-lg px-3 py-1 font-medium">TypeScript</li>
+            <li className="bg-red-200 text-red-700 rounded-lg px-3 py-1 font-medium">Tailwind CSS</li>
+          </ul>
+        </div>
       </div>
 
       <section
