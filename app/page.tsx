@@ -82,8 +82,7 @@ export default function HomePage() {
         {/* Quick Tip Card */}
         <div className="card w-full max-w-md bg-yellow-100 text-yellow-800 rounded-xl shadow-lg p-6 text-center">
           <h3 className="font-bold text-lg mb-2">Quick Tip</h3>
-          <p className="text-base m-0">
-            Use <span className="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
+          <p Name="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
           </p>
         </div>
         {/* Motivational Quote Card */}
