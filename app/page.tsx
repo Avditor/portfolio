@@ -80,26 +80,27 @@ export default function HomePage() {
       {/* Cards Section - improved placement and spacing */}
       <div className="flex flex-col items-center gap-6 mt-28 mb-10 px-4">
         {/* Quick Tip Card */}
-        <div className="card w-full max-w-md bg-yellow-100 text-yellow-800 rounded-xl shadow-lg p-6 text-center">
+        <div className="card w-full max-w-md bg-yellow-100 text-yellow-800 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-yellow-200/90 cursor-pointer">
           <h3 className="font-bold text-lg mb-2">Quick Tip</h3>
-          <p Name="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
+          <p className="text-base m-0">
+            Use <span className="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
           </p>
         </div>
         {/* Motivational Quote Card */}
-        <div className="card w-full max-w-md bg-sky-100 text-sky-700 rounded-xl shadow-lg p-6 text-center">
+        <div className="card w-full max-w-md bg-sky-100 text-sky-700 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-sky-200/90 cursor-pointer">
           <h3 className="font-bold text-lg mb-2">Motivational Quote</h3>
           <p className="text-base italic m-0">
             "Success is the sum of small efforts, repeated day in and day out."
           </p>
         </div>
         {/* Tech Stack Card */}
-        <div className="card w-full max-w-md bg-slate-100 text-slate-900 rounded-xl shadow-lg p-6 text-center">
+        <div className="card w-full max-w-md bg-slate-100 text-slate-900 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-slate-200/90 cursor-pointer">
           <h3 className="font-bold text-lg mb-2">Tech Stack</h3>
           <ul className="flex flex-wrap gap-3 justify-center p-0 m-0 list-none">
-            <li className="bg-sky-200 text-sky-700 rounded-lg px-3 py-1 font-medium">React</li>
-            <li className="bg-indigo-200 text-indigo-800 rounded-lg px-3 py-1 font-medium">Next.js</li>
-            <li className="bg-green-200 text-green-800 rounded-lg px-3 py-1 font-medium">TypeScript</li>
-            <li className="bg-red-200 text-red-700 rounded-lg px-3 py-1 font-medium">Tailwind CSS</li>
+            <li className="bg-sky-200 text-sky-700 rounded-lg px-3 py-1 font-medium transition-all duration-200 transform hover:scale-110 hover:bg-sky-300/90 hover:shadow-md cursor-pointer">React</li>
+            <li className="bg-indigo-200 text-indigo-800 rounded-lg px-3 py-1 font-medium transition-all duration-200 transform hover:scale-110 hover:bg-indigo-300/90 hover:shadow-md cursor-pointer">Next.js</li>
+            <li className="bg-green-200 text-green-800 rounded-lg px-3 py-1 font-medium transition-all duration-200 transform hover:scale-110 hover:bg-green-300/90 hover:shadow-md cursor-pointer">TypeScript</li>
+            <li className="bg-red-200 text-red-700 rounded-lg px-3 py-1 font-medium transition-all duration-200 transform hover:scale-110 hover:bg-red-300/90 hover:shadow-md cursor-pointer">Tailwind CSS</li>
           </ul>
         </div>
       </div>
