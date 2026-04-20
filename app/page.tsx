@@ -203,7 +203,7 @@ export default function HomePage() {
             "url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1800&q=80')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/30 via-black/60 to-black/80" />
         <div className="relative z-10 max-w-4xl mx-auto px-6 py-32 text-center flex flex-col items-center">
           <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-4 text-white animate-fadein-up">
             Experience
@@ -216,7 +216,7 @@ export default function HomePage() {
             {/* Experience Card 1 */}
             <div className="group bg-white/10 backdrop-blur-2xl rounded-2xl p-7 border border-cyan-300/20 shadow-xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl animate-fadein-up delay-200 w-full max-w-2xl relative">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
+                <div className="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
                   <a href="https://origincore.com" target="_blank" rel="noopener noreferrer" title="OriginCore Website">
                     <Image src="/origincore-logo.png" alt="OriginCore logo" width={80} height={80} className="object-contain" />
                   </a>
@@ -241,7 +241,7 @@ export default function HomePage() {
             {/* Experience Card 2 */}
             <div className="group bg-white/10 backdrop-blur-2xl rounded-2xl p-7 border border-cyan-300/20 shadow-xl transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl animate-fadein-up delay-300 w-full max-w-2xl relative">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="w-24 h-24 flex-shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
+                <div className="w-24 h-24 shrink-0 rounded-lg overflow-hidden bg-white/10 flex items-center justify-center border border-cyan-200/20">
                   <a href="https://oolka.com" target="_blank" rel="noopener noreferrer" title="Oolka Website">
                     <Image src="/oolka-logo.png" alt="Oolka logo" width={80} height={80} className="object-contain" />
                   </a>
@@ -264,13 +264,13 @@ export default function HomePage() {
             </div>
 
             {/* Vertical Timeline Connector (optional, for visual flow) */}
-            <div className="hidden sm:block absolute left-1/2 top-32 bottom-32 w-1 bg-gradient-to-b from-cyan-400/30 via-cyan-300/10 to-transparent rounded-full -z-10" style={{transform: 'translateX(-50%)'}} />
+            <div className="hidden sm:block absolute left-1/2 top-32 bottom-32 w-1 bg-linear-to-b from-cyan-400/30 via-cyan-300/10 to-transparent rounded-full -z-10" style={{transform: 'translateX(-50%)'}} />
           </div>
         </div>
 
       {/* Smooth Transition Divider */}
-      <div className="w-full flex justify-center items-center py-8 bg-gradient-to-b from-transparent via-cyan-400/10 to-transparent">
-        <div className="h-2 w-32 rounded-full bg-gradient-to-r from-cyan-400/40 via-blue-400/40 to-cyan-400/40 blur-sm opacity-70" />
+      <div className="w-full flex justify-center items-center py-8 bg-linear-to-b from-transparent via-cyan-400/10 to-transparent">
+        <div className="h-2 w-32 rounded-full bg-linear-to-r from-cyan-400/40 via-blue-400/40 to-cyan-400/40 blur-sm opacity-70" />
       </div>
       </section>
 
