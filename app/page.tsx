@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 
 export default function HomePage() {
+  // Temporary change for commit
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
