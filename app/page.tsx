@@ -91,7 +91,7 @@ export default function HomePage() {
         <div className="card w-full max-w-md bg-sky-100 text-sky-700 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-sky-200/90 cursor-pointer">
           <h3 className="font-bold text-lg mb-2">Motivational Quote</h3>
           <p className="text-base italic m-0">
-            "Success is the sum of small efforts, repeated day in and day out."
+            &quot;Success is the sum of small efforts, repeated day in and day out.&quot;
           </p>
         </div>
         {/* Tech Stack Card */}
