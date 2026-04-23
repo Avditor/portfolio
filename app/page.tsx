@@ -87,13 +87,6 @@ export default function HomePage() {
             Use <span className="font-semibold">Ctrl + Shift + P</span> in VS Code to access all commands instantly!
           </p>
         </div>
-        {/* Motivational Quote Card */}
-        <div className="card w-full max-w-md bg-sky-100 text-sky-700 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-sky-200/90 cursor-pointer">
-          <h3 className="font-bold text-lg mb-2">Motivational Quote</h3>
-          <p className="text-base italic m-0">
-            &quot;Success is the sum of small efforts, repeated day in and day out.&quot;
-          </p>
-        </div>
         {/* Tech Stack Card */}
         <div className="card w-full max-w-md bg-slate-100 text-slate-900 rounded-xl shadow-lg p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:bg-slate-200/90 cursor-pointer">
           <h3 className="font-bold text-lg mb-2">Tech Stack</h3>
