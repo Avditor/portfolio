@@ -321,6 +321,22 @@ export default function HomePage() {
           <p className="text-lg text-white/70 mb-10 leading-relaxed max-w-2xl mx-auto font-light section-content">
             Interested in collaboration or have a project in mind? Let&apos;s discuss how I can help.
           </p>
+
+          {/* Send a Note Section */}
+          <form className="w-full max-w-xl mx-auto bg-white/10 rounded-lg p-8 mb-8 shadow-lg flex flex-col gap-4 text-left" onSubmit={e => { e.preventDefault(); alert('Note sent! (demo only)'); }}>
+            <h3 className="text-2xl font-bold text-white mb-2">Send a Note</h3>
+            <label className="text-white/80 font-medium">Name
+              <input type="text" name="name" required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            </label>
+            <label className="text-white/80 font-medium">Email
+              <input type="email" name="email" required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            </label>
+            <label className="text-white/80 font-medium">Message
+              <textarea name="message" rows={4} required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+            </label>
+            <button type="submit" className="btn btn-primary w-full mt-2">Send Note</button>
+          </form>
+
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a href="mailto:avni@example.com" className="btn btn-primary" aria-label="Email Avni">
               Send Email
