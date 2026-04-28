@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 
 
@@ -322,20 +322,127 @@ export default function HomePage() {
             Interested in collaboration or have a project in mind? Let&apos;s discuss how I can help.
           </p>
 
-          {/* Send a Note Section */}
-          <form className="w-full max-w-xl mx-auto bg-white/10 rounded-lg p-8 mb-8 shadow-lg flex flex-col gap-4 text-left" onSubmit={e => { e.preventDefault(); alert('Note sent! (demo only)'); }}>
-            <h3 className="text-2xl font-bold text-white mb-2">Send a Note</h3>
-            <label className="text-white/80 font-medium">Name
-              <input type="text" name="name" required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
-            </label>
-            <label className="text-white/80 font-medium">Email
-              <input type="email" name="email" required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
-            </label>
-            <label className="text-white/80 font-medium">Message
-              <textarea name="message" rows={4} required className="mt-1 w-full px-3 py-2 rounded bg-black/30 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400" />
-            </label>
-            <button type="submit" className="btn btn-primary w-full mt-2">Send Note</button>
-          </form>
+
+          {/* Enhanced Send a Note Section */}
+          <ContactForm />
+// Enhanced Contact Form Component
+function ContactForm() {
+  const [form, setForm] = useState({ name: '', email: '', phone: '', message: '' });
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
+  const [submitted, setSubmitted] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+
+  function validate() {
+    const newErrors: { [key: string]: string } = {};
+    if (!form.name.trim()) newErrors.name = 'Name is required.';
+    if (!form.email.trim()) newErrors.email = 'Email is required.';
+    else if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.email)) newErrors.email = 'Invalid email.';
+    if (form.phone && !/^\+?[0-9\-\s]{7,}$/.test(form.phone)) newErrors.phone = 'Invalid phone.';
+    if (!form.message.trim()) newErrors.message = 'Message is required.';
+    return newErrors;
+  }
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setForm({ ...form, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: '' });
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    const validation = validate();
+    if (Object.keys(validation).length) {
+      setErrors(validation);
+      return;
+    }
+    setSubmitted(true);
+    setForm({ name: '', email: '', phone: '', message: '' });
+    setTimeout(() => setSubmitted(false), 4000);
+    if (formRef.current) formRef.current.reset();
+  }
+
+  return (
+    <form
+      ref={formRef}
+      className="w-full max-w-xl mx-auto bg-white/10 rounded-lg p-8 mb-8 shadow-lg flex flex-col gap-4 text-left"
+      onSubmit={handleSubmit}
+      aria-label="Send a Note Contact Form"
+      noValidate
+    >
+      <h3 className="text-2xl font-bold text-white mb-2">Send a Note</h3>
+      {submitted && (
+        <div className="bg-green-600/90 text-white rounded px-4 py-2 mb-2 text-center animate-fade-in">
+          Thank you! Your note has been sent.
+        </div>
+      )}
+      <label className="text-white/80 font-medium" htmlFor="contact-name">Name
+        <input
+          id="contact-name"
+          type="text"
+          name="name"
+          autoComplete="name"
+          required
+          value={form.name}
+          onChange={handleChange}
+          className={`mt-1 w-full px-3 py-2 rounded bg-black/30 border ${errors.name ? 'border-red-400' : 'border-white/20'} text-white focus:outline-none focus:ring-2 focus:ring-cyan-400`}
+          aria-invalid={!!errors.name}
+          aria-describedby="name-error"
+        />
+        {errors.name && <span id="name-error" className="text-red-400 text-xs">{errors.name}</span>}
+      </label>
+      <label className="text-white/80 font-medium" htmlFor="contact-email">Email
+        <input
+          id="contact-email"
+          type="email"
+          name="email"
+          autoComplete="email"
+          required
+          value={form.email}
+          onChange={handleChange}
+          className={`mt-1 w-full px-3 py-2 rounded bg-black/30 border ${errors.email ? 'border-red-400' : 'border-white/20'} text-white focus:outline-none focus:ring-2 focus:ring-cyan-400`}
+          aria-invalid={!!errors.email}
+          aria-describedby="email-error"
+        />
+        {errors.email && <span id="email-error" className="text-red-400 text-xs">{errors.email}</span>}
+      </label>
+      <label className="text-white/80 font-medium" htmlFor="contact-phone">Phone (optional)
+        <input
+          id="contact-phone"
+          type="tel"
+          name="phone"
+          autoComplete="tel"
+          value={form.phone}
+          onChange={handleChange}
+          className={`mt-1 w-full px-3 py-2 rounded bg-black/30 border ${errors.phone ? 'border-red-400' : 'border-white/20'} text-white focus:outline-none focus:ring-2 focus:ring-cyan-400`}
+          aria-invalid={!!errors.phone}
+          aria-describedby="phone-error"
+        />
+        {errors.phone && <span id="phone-error" className="text-red-400 text-xs">{errors.phone}</span>}
+      </label>
+      <label className="text-white/80 font-medium" htmlFor="contact-message">Message
+        <textarea
+          id="contact-message"
+          name="message"
+          rows={4}
+          required
+          value={form.message}
+          onChange={handleChange}
+          className={`mt-1 w-full px-3 py-2 rounded bg-black/30 border ${errors.message ? 'border-red-400' : 'border-white/20'} text-white focus:outline-none focus:ring-2 focus:ring-cyan-400`}
+          aria-invalid={!!errors.message}
+          aria-describedby="message-error"
+        />
+        {errors.message && <span id="message-error" className="text-red-400 text-xs">{errors.message}</span>}
+      </label>
+      <button
+        type="submit"
+        className="btn btn-primary w-full mt-2 disabled:opacity-60"
+        disabled={submitted}
+        aria-disabled={submitted}
+      >
+        {submitted ? 'Sent!' : 'Send Note'}
+      </button>
+    </form>
+  );
+}
 
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a href="mailto:avni@example.com" className="btn btn-primary" aria-label="Email Avni">
