@@ -318,16 +318,16 @@ a[href*="#"] {
   position: absolute;
   width: 200px;
   height: 200px;
-    background: rgba(253, 224, 71, 0.85); /* yellow */
-    border: 2px solid rgba(202, 138, 4, 1); /* dark yellow */
+    background: rgba(128, 0, 128, 0.85); /* purple */
+    border: 2px solid rgba(162, 89, 196, 1); /* lighter purple */
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff; /* white text for contrast */
     box-shadow:
-      0 0 40px 10px rgba(253, 224, 71, 0.5),
-      0 0 80px 20px rgba(202, 138, 4, 0.3);
+      0 0 40px 10px rgba(128, 0, 128, 0.5),
+      0 0 80px 20px rgba(162, 89, 196, 0.3);
 }
 
 .front {
@@ -340,19 +340,19 @@ a[href*="#"] {
 
 .left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: rgba(253, 224, 71, 0.7);
+  background: rgba(128, 0, 128, 0.7);
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(253, 224, 71, 0.7);
+  background: rgba(128, 0, 128, 0.7);
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(253, 224, 71, 0.85);
+  background: rgba(128, 0, 128, 0.85);
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: rgba(253, 224, 71, 0.85);
+  background: rgba(128, 0, 128, 0.85);
 }
 .glass-cube::before {
   content: "";
@@ -363,7 +363,7 @@ a[href*="#"] {
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(253, 224, 71, 0.3) 0%,
+    rgba(128, 0, 128, 0.3) 0%,
     transparent 70%
   );
   animation: glow-pulse 3s ease-in-out infinite;
