@@ -315,19 +315,20 @@ a[href*="#"] {
 }
 
 
+.glass-cube .cube-face {
   position: absolute;
   width: 200px;
   height: 200px;
-      background: rgba(0, 0, 0, 0.85); /* black */
-      border: 2px solid rgba(34, 34, 34, 1); /* dark gray */
-  backdrop-filter: blur(10px);
+  background: rgba(255, 223, 77, 0.92); /* warm yellow */
+  border: 2px solid rgba(200, 160, 30, 0.95); /* golden border */
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff; /* white text for contrast */
-      box-shadow:
-        0 0 40px 10px rgba(0, 0, 0, 0.5),
-        0 0 80px 20px rgba(34, 34, 34, 0.3);
+  color: #1a1a1a; /* dark text for contrast */
+  box-shadow:
+    0 6px 24px 4px rgba(255, 200, 50, 0.12),
+    0 0 60px 12px rgba(255, 223, 77, 0.10);
 }
 
 .front {
@@ -340,19 +341,19 @@ a[href*="#"] {
 
 .left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 223, 77, 0.88);
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 223, 77, 0.88);
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 235, 153, 0.95);
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(255, 235, 153, 0.95);
 }
 .glass-cube::before {
   content: "";
@@ -363,7 +364,7 @@ a[href*="#"] {
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(128, 0, 128, 0.3) 0%,
+    rgba(255, 223, 77, 0.35) 0%,
     transparent 70%
   );
   animation: glow-pulse 3s ease-in-out infinite;
@@ -385,6 +386,6 @@ a[href*="#"] {
 /* Hover effect */
 .glass-cube:hover {
   transform: scale(1.22) rotateY(45deg) rotateX(15deg);
-  box-shadow: 0 16px 48px 0 rgba(59,130,246,0.18);
+  box-shadow: 0 16px 48px 0 rgba(255, 200, 50, 0.18);
 
 }
