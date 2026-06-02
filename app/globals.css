@@ -319,16 +319,16 @@ a[href*="#"] {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(255, 223, 77, 0.92); /* warm yellow */
-  border: 2px solid rgba(200, 160, 30, 0.95); /* golden border */
+  background: linear-gradient(135deg, rgba(128,0,128,0.95), rgba(162,89,196,0.90));
+  border: 2px solid rgba(162,89,196,0.95);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1a1a1a; /* dark text for contrast */
+  color: #f3f6fa; /* light text for contrast on purple */
   box-shadow:
-    0 6px 24px 4px rgba(255, 200, 50, 0.12),
-    0 0 60px 12px rgba(255, 223, 77, 0.10);
+    0 6px 24px 4px rgba(128,0,128,0.12),
+    0 0 60px 12px rgba(162,89,196,0.10);
 }
 
 .front {
@@ -341,19 +341,19 @@ a[href*="#"] {
 
 .left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: rgba(255, 223, 77, 0.88);
+  background: rgba(128,0,128,0.88);
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(255, 223, 77, 0.88);
+  background: rgba(128,0,128,0.88);
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(255, 235, 153, 0.95);
+  background: rgba(162,89,196,0.95);
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: rgba(255, 235, 153, 0.95);
+  background: rgba(162,89,196,0.95);
 }
 .glass-cube::before {
   content: "";
@@ -364,7 +364,7 @@ a[href*="#"] {
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(255, 223, 77, 0.35) 0%,
+    rgba(162,89,196,0.35) 0%,
     transparent 70%
   );
   animation: glow-pulse 3s ease-in-out infinite;
@@ -386,6 +386,6 @@ a[href*="#"] {
 /* Hover effect */
 .glass-cube:hover {
   transform: scale(1.22) rotateY(45deg) rotateX(15deg);
-  box-shadow: 0 16px 48px 0 rgba(255, 200, 50, 0.18);
+  box-shadow: 0 16px 48px 0 rgba(128,0,128,0.18);
 
 }
