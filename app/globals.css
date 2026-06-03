@@ -11,6 +11,13 @@
   --shadow-glass: 0 8px 32px 0 rgba(128, 0, 128, 0.22);
   --border-glass: 1.5px solid rgba(255,255,255,0.22);
   --shadow-elevate: 0 4px 24px 0 rgba(128,0,128,0.10), 0 1.5px 8px 0 rgba(162,89,196,0.10);
+  /* Cube (pink) palette */
+  --cube-color-1: #ff66b3; /* primary pink */
+  --cube-color-2: #ff9ccf; /* lighter pink */
+  --cube-border: rgba(255,105,180,0.95);
+  --cube-shadow-1: 0 6px 24px 4px rgba(255,105,180,0.12);
+  --cube-shadow-2: 0 0 60px 12px rgba(255,150,200,0.10);
+  --cube-glow: rgba(255,150,200,0.35);
 }
 
 @keyframes fade-in {
@@ -319,16 +326,14 @@ a[href*="#"] {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: linear-gradient(135deg, rgba(128,0,128,0.95), rgba(162,89,196,0.90));
-  border: 2px solid rgba(162,89,196,0.95);
+  background: linear-gradient(135deg, var(--cube-color-1), var(--cube-color-2));
+  border: 2px solid var(--cube-border);
   backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #f3f6fa; /* light text for contrast on purple */
-  box-shadow:
-    0 6px 24px 4px rgba(128,0,128,0.12),
-    0 0 60px 12px rgba(162,89,196,0.10);
+  box-shadow: var(--cube-shadow-1), var(--cube-shadow-2);
 }
 
 .front {
@@ -341,19 +346,19 @@ a[href*="#"] {
 
 .left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: rgba(128,0,128,0.88);
+  background: rgba(255,105,180,0.88);
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(128,0,128,0.88);
+  background: rgba(255,105,180,0.88);
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(162,89,196,0.95);
+  background: rgba(255,150,200,0.95);
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: rgba(162,89,196,0.95);
+  background: rgba(255,150,200,0.95);
 }
 .glass-cube::before {
   content: "";
@@ -364,7 +369,7 @@ a[href*="#"] {
   height: 200%;
   background: radial-gradient(
     circle,
-    rgba(162,89,196,0.35) 0%,
+    var(--cube-glow) 0%,
     transparent 70%
   );
   animation: glow-pulse 3s ease-in-out infinite;
@@ -386,6 +391,6 @@ a[href*="#"] {
 /* Hover effect */
 .glass-cube:hover {
   transform: scale(1.22) rotateY(45deg) rotateX(15deg);
-  box-shadow: 0 16px 48px 0 rgba(128,0,128,0.18);
+  box-shadow: 0 16px 48px 0 rgba(255,105,180,0.18);
 
 }
