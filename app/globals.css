@@ -12,12 +12,12 @@
   --border-glass: 1.5px solid rgba(255,255,255,0.22);
   --shadow-elevate: 0 4px 24px 0 rgba(128,0,128,0.10), 0 1.5px 8px 0 rgba(162,89,196,0.10);
   /* Cube (pink) palette */
-  --cube-color-1: #ff66b3; /* primary pink */
-  --cube-color-2: #ff9ccf; /* lighter pink */
-  --cube-border: rgba(255,105,180,0.95);
-  --cube-shadow-1: 0 6px 24px 4px rgba(255,105,180,0.12);
-  --cube-shadow-2: 0 0 60px 12px rgba(255,150,200,0.10);
-  --cube-glow: rgba(255,150,200,0.35);
+  --cube-color-1: #ff4fa3; /* strong pink */
+  --cube-color-2: #ffb2d6; /* soft pink */
+  --cube-border: rgba(255,105,180,1);
+  --cube-shadow-1: 0 6px 24px 4px rgba(255,105,180,0.18);
+  --cube-shadow-2: 0 0 60px 12px rgba(255,140,190,0.20);
+  --cube-glow: rgba(255,145,205,0.35);
 }
 
 @keyframes fade-in {
@@ -346,19 +346,19 @@ a[href*="#"] {
 
 .left {
   transform: rotateY(-90deg) translateZ(100px);
-  background: rgba(255,105,180,0.88);
+  background: rgba(255,85,170,0.90);
 }
 .right {
   transform: rotateY(90deg) translateZ(100px);
-  background: rgba(255,105,180,0.88);
+  background: rgba(255,85,170,0.90);
 }
 .top {
   transform: rotateX(90deg) translateZ(100px);
-  background: rgba(255,150,200,0.95);
+  background: rgba(255,150,200,0.96);
 }
 .bottom {
   transform: rotateX(-90deg) translateZ(100px);
-  background: rgba(255,150,200,0.95);
+  background: rgba(255,150,200,0.96);
 }
 .glass-cube::before {
   content: "";
